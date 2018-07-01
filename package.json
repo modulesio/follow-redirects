@@ -1,6 +1,6 @@
 {
-  "name": "follow-redirects",
-  "version": "1.5.0",
+  "name": "window-follow-redirects",
+  "version": "0.0.1",
   "description": "HTTP and HTTPS modules that follow redirects.",
   "main": "index.js",
   "engines": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:olalonde/follow-redirects.git"
+    "url": "git@github.com:modulesio/window-follow-redirects.git"
   },
   "homepage": "https://github.com/olalonde/follow-redirects",
   "bugs": {
