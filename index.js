@@ -122,9 +122,12 @@ RedirectableRequest.prototype._performRequest = function () {
 
   // If specified, use the agent corresponding to the protocol
   // (HTTP and HTTPS use different types of agents)
-  if (this._options.agents) {
-    var scheme = protocol.substr(0, protocol.length - 1);
-    this._options.agent = this._options.agents[scheme];
+  if (!this._options.agent || protocol !== this._options.agent.protocol) {
+    if (protocol === 'http:') {
+      this._options.agent = http.defaultAgent;
+    } else {
+      this._options.agent = https.defaultAgent;
+    }
   }
 
   // Create the native request
